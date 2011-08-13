@@ -1,0 +1,22 @@
+{
+  "name": "Keyword Strategy",
+  "version": "1.3.6",
+  "description": "Keyword checker.",
+  "background_page": "background.html",
+  "update_url": "https://www.keywordstrategy.org/extensions/chrome.update.xml",
+  "permissions": [
+  	"cookies",
+    "http://*/",
+    "https://*/"
+  ],
+  "icons": {
+  	"48": "icon.png",
+  	"128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.keywordstrategy.org/manage*", "https://www.keywordstrategy.org/manage*"],
+      "js" : ["contentscript.js"]
+    }
+  ]
+}
